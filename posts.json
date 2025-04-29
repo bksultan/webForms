@@ -1,0 +1,4 @@
+[
+  { "title": "Post 1", "body": "This is the content of the first post loaded via AJAX." },
+  { "title": "Post 2", "body": "This is the content of the second post loaded via AJAX." }
+]
