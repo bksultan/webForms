@@ -56,7 +56,8 @@
       <tr>
         <th>Select</th>
         <th>Transaction ID</th>
-        <th>Date</th>
+        <th>Start Date</th>
+        <th>End Date</th>
         <th>Description</th>
         <th>Amount</th>
         <th>Status</th>
@@ -69,13 +70,16 @@
       <script>
         const statuses = ['Pending', 'Completed', 'Failed', 'Reversed'];
         const accountTypes = ['Asset', 'Liability', 'Equity', 'Revenue', 'Expense'];
+        const startDates = ['2024-01-01', '2024-02-01', '2024-03-01', '2024-04-01'];
+        const endDates   = ['2024-01-10', '2024-02-15', '2024-03-20', '2024-04-25'];
 
         for(let i = 1; i <= 200; i++) {
           document.write(`
             <tr>
               <td><input type="checkbox" class="form-check-input"></td>
               <td>TXN${1000 + i}</td>
-              <td>${['2024-01-01', '2024-02-15', '2024-03-10', '2024-04-20'][i % 4]}</td>
+              <td>${startDates[i % 4]}</td>
+              <td>${endDates[i % 4]}</td>
               <td>${['Invoice Payment', 'Refund', 'Salary Payment', 'Consulting Fee'][i % 4]}</td>
               <td>$${(Math.random() * 10000).toFixed(2)}</td>
               <td>${statuses[i % statuses.length]}</td>
